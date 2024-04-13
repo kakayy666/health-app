@@ -1,5 +1,6 @@
 <template>
   <NavBar />
+  <ContentBase>
       <div class="row">
         <div class="col-3">
           <UserProfileInfo @follow="follow" @unfollow="unfollow" :user="user" />
@@ -9,6 +10,7 @@
           <UserProfilePosts :posts="posts" />
         </div>
       </div>
+    </ContentBase>
 </template>
 
 <script>
@@ -18,6 +20,7 @@ import UserProfileWrite from '../components/UserProfileWrite';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 import NavBar from '@/components/NavBar';
+import ContentBase from  '../components/ContentBase';
 import { reactive } from 'vue';
 
 export default {
@@ -26,7 +29,8 @@ export default {
       UserProfileInfo,
       UserProfilePosts,
     UserProfileWrite,
-    NavBar
+    NavBar,
+    ContentBase
   },
   setup() {
     const user = reactive({

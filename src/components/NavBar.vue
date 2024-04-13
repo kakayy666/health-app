@@ -9,24 +9,24 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'home' }">首页</router-link>
+            <router-link class="nav-link" :to="{ name: 'home' }" :class="{ 'active-link': $route.name === 'home' }">首页</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'healthinfo' }">健康资讯</router-link>
+            <router-link class="nav-link" :to="{ name: 'healthinfo' }" :class="{ 'active-link': $route.name === 'healthinfo' }">健康资讯</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'healthfile' }">健康档案</router-link>
+            <router-link class="nav-link" :to="{ name: 'healthfile' }" :class="{ 'active-link': $route.name === 'healthfile' }">健康档案</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'healthfile' }">AI健康评测</router-link>
+            <router-link class="nav-link" :to="{ name: 'aihealth' }" :class="{ 'active-link': $route.name === 'aihealth' }">AI健康评测</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'healthfile' }">互动社区</router-link>
+            <router-link class="nav-link" :to="{ name: 'wechat' }" :class="{ 'active-link': $route.name === 'wechat' }">互动社区</router-link>
           </li>
         </ul>
         <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" :to="{name: 'login'}">退出登录</router-link>
+          <router-link id="exit" class="nav-link" :to="{name: 'login'}">退出登录</router-link>
         </li>
       </ul>
       </div>
@@ -41,4 +41,17 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.active-link {
+  font-weight: bold;
+  color: lightseagreen; /* 或者你喜欢的任何颜色 */
+}
+
+#exit{
+  background-color: yellow;
+  color: black;
+}
+#exit:hover{
+  color: lightcoral;
+}
+</style>

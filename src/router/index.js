@@ -5,6 +5,8 @@ import HealthfileView from '../views/HealthfileView';
 import LoginView from '../views/LoginView';
 import RegisterView from '../views/RegisterView';
 import NotFoundView from '../views/NotFoundView';
+import AIHealthView from '../views/AIHealthView.vue';
+import WechatView from '../views/WechatView.vue';
 
 const routes = [
   {
@@ -41,6 +43,16 @@ const routes = [
     path: '/404',
     name: '404',
     component: NotFoundView
+  },
+  {
+    path: '/aihealth',
+    name: 'aihealth',
+    component: AIHealthView
+  },
+  {
+    path: '/wechat',
+    name: 'wechat',
+    component: WechatView
   },
 ]
 
